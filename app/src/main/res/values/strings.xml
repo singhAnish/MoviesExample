@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Movie</string>
+    <string name="lint_icon">Image Icon</string>
+    <string name="trendingText">Trending</string>
+    <string name="watchNow">Watch Now</string>
+
+    <string name="retry">Retry</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="internetIssue">No Internet!</string>
+    <string name="noInternet">Your internet connection is unstable</string>
+    <string name="somethingWrong">Something went wrong, please try later!</string>
+
+    <string name="imageTransition">movie_image_transition</string>
+    <string name="nameTransition">movie_name_transition</string>
+    <string name="ratingTransition">movie_rating_transition</string>
+
+
+    <string name="information">INFORMATION</string>
+    <string name="studio">Studio</string>
+    <string name="genre">Genre</string>
+    <string name="language">Language</string>
+    <string name="released">Released</string>
+    <string name="runTime">Runtime</string>
+
+    <string name="functionalityNotAdded">Functionality Not added Yet!</string>
+
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/bottomToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:minHeight="?attr/actionBarSize"
+            android:padding="@dimen/standard_16">
+
+            <ImageButton
+                android:id="@+id/menuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:contentDescription="@string/lint_icon"
+                android:src="@drawable/svg_menu" />
+
+            <ImageButton
+                android:id="@+id/moreBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:contentDescription="@string/lint_icon"
+                android:src="@drawable/svg_vertical_dots" />
+        </RelativeLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomToolbar">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/productDetailAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/trendingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/standard_12"
+                    android:text="@string/trendingText"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_24"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:textStyle="normal" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/internetEnabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="true"
+                        android:layoutAnimation="@anim/layout_animation_from_bottom"
+                        android:overScrollMode="never"
+                        android:saveEnabled="false"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout android:id="@+id/progressLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_56"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/black"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/loadingLay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <ProgressBar
+                                style="@style/Base.Widget.AppCompat.ProgressBar"
+                                android:layout_width="@dimen/standard_32"
+                                android:layout_height="@dimen/standard_32"
+                                android:theme="@style/whiteProgressBar" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/standard_72"
+                                android:text="@string/loading"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize_14" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/footerNoInternet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/standard_8"
+                            android:paddingEnd="@dimen/standard_16"
+                            android:paddingStart="@dimen/standard_16"
+                            android:paddingTop="@dimen/standard_8"
+                            android:visibility="gone">
+
+                            <Button
+                                android:id="@+id/footerRetryButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/colorPrimaryDark"
+                                android:text="@string/retry"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize_14" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@id/footerRetryButton"
+                                android:text="@string/internetIssue"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textSize_14" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/internetDisabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/standard_16"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/retryBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/retry"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_14" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/retryBtn"
+                        android:text="@string/internetIssue"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_16" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/standard_12"
+            android:background="@drawable/drawable_circle_pink"
+            android:contentDescription="@string/lint_icon"
+            android:src="@drawable/svg_search" />
+    </RelativeLayout>
+</layout>

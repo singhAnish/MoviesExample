@@ -1,4 +1,4 @@
-package com.android.movie.app;
+package com.android.movie;
 
 import android.app.Activity;
 import android.app.Application;
@@ -6,9 +6,9 @@ import android.content.Context;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 
-import com.android.movie.app.di.AppComponent;
-import com.android.movie.app.di.ContextModule;
-import com.android.movie.app.di.DaggerAppComponent;
+import com.android.movie.di.component.AppComponent;
+import com.android.movie.di.component.DaggerAppComponent;
+import com.android.movie.di.module.app.ContextModule;
 import com.android.movie.util.ConnectionDetector;
 
 import timber.log.Timber;

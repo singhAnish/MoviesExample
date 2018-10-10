@@ -1,6 +1,9 @@
-package com.android.movie.app.di;
+package com.android.movie.di.module.app;
 
 import android.content.Context;
+
+import com.android.movie.di.qualifier.AppContext;
+import com.android.movie.di.scoping.AppScope;
 
 import dagger.Module;
 import dagger.Provides;

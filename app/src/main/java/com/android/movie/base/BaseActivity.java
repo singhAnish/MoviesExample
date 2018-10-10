@@ -1,4 +1,4 @@
-package com.android.movie.util.base;
+package com.android.movie.base;
 
 import android.app.ProgressDialog;
 import android.content.Context;

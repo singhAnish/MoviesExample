@@ -1,4 +1,4 @@
-package com.android.movie.activity.movieList;
+package com.android.movie.activity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -10,15 +10,15 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Pair;
 
 import com.android.movie.BuildConfig;
+import com.android.movie.MyApp;
 import com.android.movie.R;
-import com.android.movie.activity.movieDetail.MovieDetailActivity;
-import com.android.movie.activity.movieList.di.DaggerMovieComponent;
-import com.android.movie.activity.movieList.di.MovieComponent;
-import com.android.movie.activity.movieList.di.MovieModule;
 import com.android.movie.adapter.MovieAdapter;
-import com.android.movie.app.MyApp;
+import com.android.movie.base.BaseActivity;
 import com.android.movie.contract.MovieContract.View;
 import com.android.movie.databinding.ActivityMovieListBinding;
+import com.android.movie.di.component.DaggerMovieComponent;
+import com.android.movie.di.component.MovieComponent;
+import com.android.movie.di.module.MovieModule;
 import com.android.movie.model.movieList.Movie;
 import com.android.movie.model.movieList.MovieResults;
 import com.android.movie.network.MovieRepo;
@@ -26,7 +26,6 @@ import com.android.movie.presenter.MoviePresenter;
 import com.android.movie.util.ConnectionDetector;
 import com.android.movie.util.Local;
 import com.android.movie.util.RecyclerItemClickListener;
-import com.android.movie.util.base.BaseActivity;
 import com.bumptech.glide.RequestManager;
 
 import java.util.ArrayList;

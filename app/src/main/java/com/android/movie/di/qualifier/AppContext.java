@@ -1,4 +1,4 @@
-package com.android.movie.app.di;
+package com.android.movie.di.qualifier;
 
 import javax.inject.Qualifier;
 

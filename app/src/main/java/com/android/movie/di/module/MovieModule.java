@@ -1,6 +1,7 @@
-package com.android.movie.activity.movieList.di;
+package com.android.movie.di.module;
 
-import com.android.movie.activity.movieList.MovieActivity;
+import com.android.movie.activity.MovieActivity;
+import com.android.movie.di.scoping.MovieScope;
 
 import dagger.Module;
 import dagger.Provides;

@@ -1,4 +1,4 @@
-package com.android.movie.app.di;
+package com.android.movie.di.scoping;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,9 +1,9 @@
 package com.android.movie.presenter;
 
+import com.android.movie.base.BasePresenter;
 import com.android.movie.contract.MovieContract.Presenter;
 import com.android.movie.contract.MovieContract.View;
 import com.android.movie.model.movieList.Movie;
-import com.android.movie.util.base.BasePresenter;
 
 import retrofit2.Response;
 

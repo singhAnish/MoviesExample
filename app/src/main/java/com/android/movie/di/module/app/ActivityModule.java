@@ -1,7 +1,9 @@
-package com.android.movie.app.di;
+package com.android.movie.di.module.app;
 
 import android.app.Activity;
 import android.content.Context;
+
+import com.android.movie.di.scoping.AppScope;
 
 import javax.inject.Named;
 

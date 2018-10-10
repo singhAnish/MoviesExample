@@ -1,6 +1,7 @@
-package com.android.movie.app.di;
+package com.android.movie.di.module.app;
 
 import com.android.movie.BuildConfig;
+import com.android.movie.di.scoping.AppScope;
 import com.android.movie.network.DateTimeConverter;
 import com.android.movie.network.MovieRepo;
 import com.google.gson.Gson;

@@ -1,24 +1,24 @@
-package com.android.movie.activity.movieDetail;
+package com.android.movie.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
 import com.android.movie.BuildConfig;
+import com.android.movie.MyApp;
 import com.android.movie.R;
-import com.android.movie.activity.movieDetail.di.DaggerMovieDetailComponent;
-import com.android.movie.activity.movieDetail.di.MovieDetailComponent;
-import com.android.movie.activity.movieDetail.di.MovieDetailModule;
-import com.android.movie.app.MyApp;
+import com.android.movie.base.BaseActivity;
 import com.android.movie.contract.MovieDetailContract.View;
 import com.android.movie.databinding.ActivityMovieDetailBinding;
+import com.android.movie.di.component.DaggerMovieDetailComponent;
+import com.android.movie.di.component.MovieDetailComponent;
+import com.android.movie.di.module.MovieDetailModule;
 import com.android.movie.model.movieDetail.MovieDetail;
 import com.android.movie.model.movieList.MovieResults;
 import com.android.movie.network.MovieRepo;
 import com.android.movie.presenter.MovieDetailPresenter;
 import com.android.movie.util.ConnectionDetector;
 import com.android.movie.util.Local;
-import com.android.movie.util.base.BaseActivity;
 import com.bumptech.glide.RequestManager;
 
 import javax.inject.Inject;

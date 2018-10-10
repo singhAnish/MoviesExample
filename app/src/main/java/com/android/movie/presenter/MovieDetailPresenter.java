@@ -1,10 +1,10 @@
 package com.android.movie.presenter;
 
+import com.android.movie.base.BasePresenter;
 import com.android.movie.contract.MovieDetailContract.Presenter;
 import com.android.movie.contract.MovieDetailContract.View;
 import com.android.movie.model.movieDetail.MovieDetail;
 import com.android.movie.model.movieList.MovieResults;
-import com.android.movie.util.base.BasePresenter;
 
 import retrofit2.Response;
 

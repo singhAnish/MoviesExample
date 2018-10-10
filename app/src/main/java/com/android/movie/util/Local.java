@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
-import com.android.movie.app.MyApp;
+import com.android.movie.MyApp;
 
 
 public class Local {

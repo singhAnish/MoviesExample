@@ -1,6 +1,10 @@
-package com.android.movie.app.di;
+package com.android.movie.di.component;
 
 import com.android.movie.data.AppDatabase;
+import com.android.movie.di.module.app.AppModule;
+import com.android.movie.di.module.app.DataBaseModule;
+import com.android.movie.di.module.app.GlideModule;
+import com.android.movie.di.scoping.AppScope;
 import com.android.movie.network.MovieRepo;
 import com.bumptech.glide.RequestManager;
 

@@ -1,4 +1,4 @@
-package com.android.movie.activity.movieDetail.di;
+package com.android.movie.di.scoping;
 
 import javax.inject.Scope;
 
